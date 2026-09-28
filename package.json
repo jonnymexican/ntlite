@@ -1,0 +1,26 @@
+{
+  "name": "ntlite",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "network-tools lite: browser-only network utilities (DNS-over-HTTPS, IP info, subnet math) — no backend",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^30.1.1",
+    "vite": "^8.3.1",
+    "vitest": "^5.0.1"
+  }
+}
