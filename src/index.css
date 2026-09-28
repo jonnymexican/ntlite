@@ -265,6 +265,25 @@ select {
   margin: 0 0 0.5rem;
 }
 
+/* Vault */
+.vault-row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.7rem;
+}
+
+.vault-status {
+  font-size: 0.85rem;
+  color: #7fd6a8;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
 /* CORS wall of shame */
 .shame-summary {
   font-weight: 700;

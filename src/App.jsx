@@ -1,5 +1,6 @@
 import * as React from 'react';
 import AppNav from './components/AppNav.jsx';
+import Vault from './components/Vault.jsx';
 import DnsLookup from './tools/DnsLookup.jsx';
 import DnsPropagation from './tools/DnsPropagation.jsx';
 import IpInfo from './tools/IpInfo.jsx';
@@ -47,7 +48,11 @@ export default function App() {
       <main className="panel">{active ? <active.component /> : null}</main>
 
       <footer className="app-footer">
-        lite edition — DNS, propagation, IP info, subnet math. The full 8-tool edition with port scanning and TLS inspection needs a server.
+        <Vault />
+        <p>
+          lite edition — 6 tools in your browser. The full server edition adds port scanning,
+          TLS inspection, and security-header grading.
+        </p>
       </footer>
     </div>
   );
