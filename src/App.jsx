@@ -1,9 +1,11 @@
 import * as React from 'react';
+import AppNav from './components/AppNav.jsx';
 import DnsLookup from './tools/DnsLookup.jsx';
 import DnsPropagation from './tools/DnsPropagation.jsx';
 import IpInfo from './tools/IpInfo.jsx';
 import SubnetCalculator from './tools/SubnetCalculator.jsx';
 import HeaderProbe from './tools/HeaderProbe.jsx';
+import CorsShame from './tools/CorsShame.jsx';
 
 const TOOLS = [
   { id: 'dns', label: 'DNS Lookup', component: DnsLookup },
@@ -11,6 +13,7 @@ const TOOLS = [
   { id: 'ipinfo', label: 'IP Info', component: IpInfo },
   { id: 'netcalc', label: 'Subnet Calculator', component: SubnetCalculator },
   { id: 'headers', label: 'Header Probe', component: HeaderProbe },
+  { id: 'corsshame', label: 'CORS Wall of Shame', component: CorsShame },
 ];
 
 export default function App() {
@@ -19,6 +22,7 @@ export default function App() {
 
   return (
     <div className="app">
+      <AppNav current="https://jonnymexican.github.io/ntlite/" />
       <header className="app-header">
         <h1>network-tools <span className="lite-badge">lite</span></h1>
         <p className="tagline">

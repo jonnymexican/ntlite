@@ -18,6 +18,64 @@ body {
   padding: 2rem 1.1rem 3rem;
 }
 
+/* Cross-app nav pill */
+.app-nav {
+  position: fixed;
+  top: 0.6rem;
+  left: 0.6rem;
+  display: flex;
+  gap: 0.25rem;
+  z-index: 10;
+  background: rgba(13, 26, 31, 0.78);
+  border: 1px solid rgba(226, 237, 240, 0.14);
+  border-radius: 999px;
+  padding: 0.25rem 0.4rem;
+  backdrop-filter: blur(8px);
+}
+
+.app-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.72;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+.app-nav-link:hover {
+  opacity: 1;
+  background: rgba(226, 237, 240, 0.08);
+}
+
+.app-nav-link.current {
+  opacity: 1;
+  background: rgba(226, 237, 240, 0.16);
+}
+
+/* Keep interactive elements clear of the floating pill when the browser
+   scrolls them into view. */
+button,
+input,
+textarea,
+select {
+  scroll-margin-top: 64px;
+}
+
+/* On phones the floating pill becomes a tap trap: anything scrolled under
+   it silently sends the tap to another app. In normal flow it can't overlap
+   anything, and desktop keeps the floating version. */
+@media (max-width: 640px) {
+  .app-nav {
+    position: static;
+    margin: 0 auto 1.25rem;
+    width: fit-content;
+  }
+}
+
 .app-header h1 {
   margin: 0;
   font-size: 1.7rem;
@@ -206,6 +264,37 @@ body {
   font-size: 0.9rem;
   margin: 0 0 0.5rem;
 }
+
+/* CORS wall of shame */
+.shame-summary {
+  font-weight: 700;
+  color: #b8ccd2;
+  margin: 0.9rem 0 0;
+}
+
+.shame-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.shame-badge { font-size: 1.05rem; }
+
+.shame-url {
+  font-weight: 700;
+  min-width: 11rem;
+}
+
+.shame-note {
+  color: #8aa4ac;
+  font-size: 0.82rem;
+  margin-left: auto;
+}
+
+.shame-readable { }
+.shame-shame { }
+.shame-unreachable { opacity: 0.65; }
 
 .app-footer {
   margin-top: 3rem;
