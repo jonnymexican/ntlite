@@ -193,6 +193,20 @@ body {
   word-break: break-all;
 }
 
+.hint-line {
+  color: #8aa4ac;
+  font-size: 0.85rem;
+  margin: 0.6rem 0 0;
+}
+
+.probe-result { margin-top: 0.9rem; }
+
+.probe-meta {
+  color: #b8ccd2;
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem;
+}
+
 .app-footer {
   margin-top: 3rem;
   text-align: center;

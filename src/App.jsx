@@ -3,12 +3,14 @@ import DnsLookup from './tools/DnsLookup.jsx';
 import DnsPropagation from './tools/DnsPropagation.jsx';
 import IpInfo from './tools/IpInfo.jsx';
 import SubnetCalculator from './tools/SubnetCalculator.jsx';
+import HeaderProbe from './tools/HeaderProbe.jsx';
 
 const TOOLS = [
   { id: 'dns', label: 'DNS Lookup', component: DnsLookup },
   { id: 'propagation', label: 'DNS Propagation', component: DnsPropagation },
   { id: 'ipinfo', label: 'IP Info', component: IpInfo },
   { id: 'netcalc', label: 'Subnet Calculator', component: SubnetCalculator },
+  { id: 'headers', label: 'Header Probe', component: HeaderProbe },
 ];
 
 export default function App() {
